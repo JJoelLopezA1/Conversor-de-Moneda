@@ -10,10 +10,10 @@ package Modelo;
  * @author Joel López Andarsia
  */
 public class Conversor {
-    private double cantidad;
-    private double valorPeso = 0.00025;
-    private double valorDolar = 4000;
-    private double resultado;
+    private float cantidad;
+    private float valorPeso = 0.00025;
+    private float valorDolar = 4000;
+    private float resultado;
 
     public Conversor() {
         
@@ -24,45 +24,45 @@ public class Conversor {
         this.resultado = resultado;
     }
 
-    public double getCantidad() {
+    public float getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(double cantidad) {
+    public void setCantidad(float cantidad) {
         this.cantidad = cantidad;
     }
 
-    public double getValorPeso() {
+    public float getValorPeso() {
         return valorPeso;
     }
 
-    public void setValorPeso(double valorPeso) {
+    public void setValorPeso(float valorPeso) {
         this.valorPeso = valorPeso;
     }
 
-    public double getValorDolar() {
+    public float getValorDolar() {
         return valorDolar;
     }
 
-    public void setValorDolar(double valorDolar) {
+    public void setValorDolar(float valorDolar) {
         this.valorDolar = valorDolar;
     }
 
-    public double getResultado() {
+    public float getResultado() {
         return resultado;
     }
 
-    public void setResultado(double resultado) {
+    public void setResultado(float resultado) {
         this.resultado = resultado;
     }
 
-    public double convertirADolar(){
+    public float convertirADolar(){
         this.resultado = (this.cantidad*this.valorPeso);
         
         return this.resultado;
     }
     
-    public double convertirAPeso(){
+    public float convertirAPeso(){
         this.resultado = (this.cantidad*this.valorDolar);
         
         return this.resultado;
