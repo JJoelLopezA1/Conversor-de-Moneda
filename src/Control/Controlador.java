@@ -15,25 +15,26 @@ import java.awt.event.ActionListener;
  * @author Joel López Andarsia
  */
 public class Controlador implements ActionListener{
+    //
     private ConversorVista view;
     private Conversor con;
 
     public Controlador(ConversorVista view, Conversor con) {
         this.view = view;
         this.con = con;
-        
+        //
         this.view.btnConvertP.addActionListener(this);
         this.view.btnConvertD.addActionListener(this);
     }
     
     public void iniciar(){
-        //view.setTittle("Conversor de Moneda");
+        view.setTittle("Conversor de Moneda");
         view.setLocationRelativeTo(null);
     }
 
     @Override
     public void actionPerformed(ActionEvent e){
-        con.setCantidad(Double.parseDouble(view.txtIngreso.getText()));
+        con.setCantidad(Float.parseFloat(view.txtIngreso.getText()));
         con.convertirADolar();
         con.convertirAPeso();
         
