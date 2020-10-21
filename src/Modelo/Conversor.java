@@ -10,67 +10,68 @@ package Modelo;
  * @author Joel López Andarsia
  */
 public class Conversor {
-    private double cantidad;
-    private double valorPeso = 0.00025;
-    private double valorDolar = 4000;
-    private double resultado;
-
+    //Cantidad que se desea convertir
+    private float cantidad;
+    //Valor predeterminado de las monedas en la actualidad
+    private float valorPeso = 0.00025;
+    private float valorDolar = 4000;
+    //Valor de la cantidad convertida
+    private float resultado;
+    //Constructor vacío
     public Conversor() {
         
     }
-
+    //Contructor Principal
     public Conversor(float cantidad, float resultado) {
         this.cantidad = cantidad;
         this.resultado = resultado;
     }
-
-    public double getCantidad() {
+    //Getter y Setter
+    public float getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(double cantidad) {
+    public void setCantidad(float cantidad) {
         this.cantidad = cantidad;
     }
 
-    public double getValorPeso() {
+    public float getValorPeso() {
         return valorPeso;
     }
 
-    public void setValorPeso(double valorPeso) {
+    public void setValorPeso(float valorPeso) {
         this.valorPeso = valorPeso;
     }
 
-    public double getValorDolar() {
+    public float getValorDolar() {
         return valorDolar;
     }
 
-    public void setValorDolar(double valorDolar) {
+    public void setValorDolar(float valorDolar) {
         this.valorDolar = valorDolar;
     }
 
-    public double getResultado() {
+    public float getResultado() {
         return resultado;
     }
 
-    public void setResultado(double resultado) {
+    public void setResultado(float resultado) {
         this.resultado = resultado;
     }
-
+    //Método para convertir de Peso a Dolar
     public double convertirADolar(){
         this.resultado = (this.cantidad*this.valorPeso);
-        
         return this.resultado;
     }
-    
+    //Método para convertir de Dolar a Peso
     public double convertirAPeso(){
         this.resultado = (this.cantidad*this.valorDolar);
-        
         return this.resultado;
     }
-
+    //Método toString
     @Override
     public String toString() {
-        return "Conversor{" + "cantidad=" + cantidad + ", valorPeso=" + valorPeso + ", valorDolar=" + valorDolar + ", resultado=" + resultado + '}';
+        return "Conversor{" + "Cantidad=" + cantidad + ", Valor Peso=" + valorPeso + ", Valor Dolar=" + valorDolar + ", Resultado=" + resultado + '}';
     }
     
     
